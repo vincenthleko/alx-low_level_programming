@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - A program that prints a line using the putchar function
+ * main - A program that prints lowercase and uppercase letters using putchar
  * Return: 0 (Success)
  */
 int main(void)
@@ -17,7 +17,7 @@ int main(void)
 			 c++;
 		 }
 	 while
-		 (d <= 'z') {
+		 (d <= 'Z') {
 			 putchar(d);
 			 d++;
 		 }
