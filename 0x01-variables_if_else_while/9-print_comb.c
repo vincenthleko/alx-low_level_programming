@@ -9,7 +9,7 @@ int main(void)
 
 	while (numbers <= '9')
 	{
-		putcaher(numbers);
+		putchar(numbers);
 		if (numbers != '9')
 		{
 			putchar(',');
