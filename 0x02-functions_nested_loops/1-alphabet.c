@@ -1,8 +1,10 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - a program that prints lowercase alphabets
+ *print_alphabet - make the alphabet
  * Return: 0 (success)
  */
+
 void print_alphabet(void)
 {
 	char alphabet;
