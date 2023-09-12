@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * main - a program that prints lowercase alphabets
  * Return: 0 (success)
