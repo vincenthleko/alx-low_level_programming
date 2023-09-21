@@ -9,8 +9,8 @@
 char *leed(char *n)
 {
 	int i, j;
-	char s1[] = aAeEoOtTlL;
-	char s2[] = 4433007711;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
 	for (i = 0; n[i] != '\0'; i++)
 	{
@@ -19,6 +19,7 @@ char *leed(char *n)
 			if (n[i] == s1[j])
 			{
 				n[i] = s1[j];
+				break;
 			}
 		}
 	}
