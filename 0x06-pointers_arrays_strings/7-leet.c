@@ -18,7 +18,7 @@ char *leed(char *n)
 		{
 			if (n[i] == s1[j])
 			{
-				n[i] = s1[j];
+				n[i] = s2[j];
 				break;
 			}
 		}
