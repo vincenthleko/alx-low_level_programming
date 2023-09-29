@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 		while (num >= coin[j])
 		{
 			result++;
-			num -= coin[j]
+			num -= coin[j];
 		}
 	}
 	printf("%d\n", result);
