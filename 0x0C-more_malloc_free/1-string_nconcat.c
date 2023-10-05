@@ -1,5 +1,5 @@
 #include "main.h"
-#include <sttdlib.h>
+#include <stdlib.h>
 
 /**
  * *string_nconcat - concatenates n byte of string to
