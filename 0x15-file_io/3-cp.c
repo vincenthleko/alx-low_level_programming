@@ -16,7 +16,7 @@ void check_IO_stat(int stat, int fd, char *filename, char node);
 int main(int argc, char *argv[])
 {
 	int src, dest, n_read = 1024, wrote, close_src, close_dest;
-	unsigned int mode = S_IRUSR | S_IWUSR | S_IRGRP |S_IWGRP | S_IROTH;
+	unsigned int mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -42,5 +42,32 @@ int main(int argc, char *argv[])
 	close_dest = close(dest);
 	chec_IO_stat(close_dest, dest, NULL, 'C');
 	return (0);
+}
 
+/**
+ * check_IO_stat - funct checks if a file can be closed or opened
+ * @stat: file discriptor to file to be opened
+ * @filename: name of file
+ * @mode: closing or opening
+ * @fd: file discriptor
+ * Return: void
+ */
 
+void check_IO_stat(int stat, int fd, char *filename, char mode)
+{
+	if (mode == 'C' && stat == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+	else if (mode == 'O' && stat == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+		exit(98);
+	}
+	else if (mode == 'W' && stat == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+		exit(98);
+	}
+}
